@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spammer.css">
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault()); // Zablokuj prawy przycisk myszy
 
-        function redirectToSpammer() {
-            window.location.href = 'Spammer.html'; // Przekierowanie na spammer.html
+        function sendEmail() {
+            const emailInput = document.getElementById('emailInput').value;
+            fetch('http://127.0.0.1:5000/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: emailInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+            });
         }
     </script>
-    
-    <title>Czarna Strona</title>
+    <title>Email Spammer</title>
 </head>
 <body>
-    <img src="https://media.tenor.com/3ItiA2urMygAAAAM/nerowo-fsociety.gif" alt="fsociety logo" class="fsociety-logo">
-
-    <div class="button-container" onclick="redirectToSpammer()" style="cursor: pointer;">
-        <img src="https://cdn-icons-png.flaticon.com/512/9275/9275788.png" alt="Ikona" class="button-icon">
-        <span class="button-text">Email Spammer</span>
+    <img src="https://i.pinimg.com/originals/25/c3/b7/25c3b7e056ec7bd21dbd69fd93879aa7.gif" alt="fsociety logo" class="fsociety-logo">
+    <div class="container">
+        <h2>Podaj email celu</h2>
+        <input type="email" id="emailInput" placeholder="Wpisz swój email" required>
+        <br>
+        <button onclick="sendEmail()">Wyślij</button>
     </div>
 </body>
 </html>
