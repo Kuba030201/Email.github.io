@@ -9,7 +9,7 @@
 
         function sendEmail() {
             const emailInput = document.getElementById('emailInput').value;
-            fetch('http://127.0.0.1:5000/send', {
+            fetch('http://127.0.0.1:5000/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
