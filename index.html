@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Zablokuj prawy przycisk myszy
+
+        function redirectToSpammer() {
+            window.location.href = 'spammer.html'; // Przekierowanie na spammer.html
+        }
+    </script>
+    
+    <title>Czarna Strona</title>
+</head>
+<body>
+    <img src="https://media.tenor.com/3ItiA2urMygAAAAM/nerowo-fsociety.gif" alt="fsociety logo" class="fsociety-logo">
+
+    <div class="button-container" onclick="redirectToSpammer()" style="cursor: pointer;">
+        <img src="https://cdn-icons-png.flaticon.com/512/9275/9275788.png" alt="Ikona" class="button-icon">
+        <span class="button-text">Email Spammer</span>
+    </div>
+</body>
+</html>

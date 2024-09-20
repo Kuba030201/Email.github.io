@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Kolor tekstu na biały (możesz zmienić) */
+}
+.fsociety-logo {
+    width: 300px; /* Szerokość zdjęcia */
+    height: auto; /* Wysokość automatyczna, aby zachować proporcje */
+}
+
+.button-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 25px; /* Okrągłe rogi */
+    padding: 10px 20px; /* Padding wewnętrzny */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+top: 8px;
+}
+
+.button-icon {
+    width: 33px; /* Szerokość ikony */
+    height: auto; /* Wysokość automatyczna, aby zachować proporcje */
+    margin-right: 10px; /* Odstęp między ikoną a tekstem */
+}
+
+.button-text {
+    color: white; /* Kolor tekstu */
+    font-size: 16px; /* Rozmiar czcionki */
+}

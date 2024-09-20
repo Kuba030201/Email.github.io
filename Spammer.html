@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spammer.css">
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Zablokuj prawy przycisk myszy
+        
+        function sendEmail() {
+            const emailInput = document.getElementById('emailInput').value;
+            fetch('/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: emailInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            });
+        }
+    </script>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/25/c3/b7/25c3b7e056ec7bd21dbd69fd93879aa7.gif" alt="fsociety logo" class="fsociety-logo">
+    <div class="container">
+        <h2>Podaj email celu</h2>
+        <input type="email" id="emailInput" placeholder="Wpisz swój email" required>
+        <br>
+        <button onclick="sendEmail()">Wyślij</button>
+    </div>
+</body>
+</html>

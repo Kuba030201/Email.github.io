@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Kolor tekstu na biały (możesz zmienić) */
+}
+
+.fsociety-logo {
+    width: 400px; /* Szerokość zdjęcia */
+    height: auto; /* Wysokość automatyczna, aby zachować proporcje */
+}
+
+
+.container {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Lekko przezroczyste czarne tło */
+    border: 2px solid white; /* Białe obramowanie */
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 350px; /* Szerokość kontenera */
+    box-sizing: border-box; /* Uwzględnia obramowanie w szerokości */
+}
+
+input[type="email"] {
+    background-color: black; /* Czarny kolor tła inputu */
+    border: 2px solid white; /* Białe obramowanie */
+    color: white; /* Biały tekst */
+    padding: 15px; /* Większe wypełnienie dla lepszego efektu */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px); /* Szerokość inputu z uwzględnieniem paddingu */
+    font-size: 16px; /* Rozmiar czcionki */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+button {
+    background-color: black; /* Czarny przycisk */
+    border: 2px solid white; /* Białe obramowanie */
+    color: white;
+    padding: 15px 20px; /* Większe wypełnienie */
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%; /* Przyciski mają 100% szerokości */
+    box-sizing: border-box; /* Uwzględnia obramowanie w szerokości */
+}
+
+button:hover {
+    background-color: white; /* Zmiana koloru przycisku po najechaniu */
+    color: black;
+}
